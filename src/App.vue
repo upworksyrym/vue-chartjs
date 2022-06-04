@@ -1,18 +1,36 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="container pt-5">
+    <div class="row">
+      <div class="col-6">
+        <h1>Where Are We Going to Land?</h1>
+      </div>
+      <div class="col-3">
+        <span class="mx-1 badge rounded-pill bg-info">CERTAIN</span>
+        <span class="mx-1 badge rounded-pill bg-warning text-black">EXPECTED</span>
+        <span class="mx-1 badge rounded-pill bg-danger">UNLIKELY</span>
+      </div>
+      <div class="col-3">
+        <div class="btn-group border border-dark border-3 float-end" role="group" aria-label="Basic example">
+          <router-link to="/">
+            <button type="button" class="btn btn-info">Sales</button>
+          </router-link>
+          <router-link to="/pres">
+            <button type="button" class="btn btn-white">Prospecting</button>
+          </router-link>
+        </div>
+      </div>
+    </div>
+    <div>
+      <router-view/>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
-  }
+  components: {}
 }
 </script>
 
